@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34310.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "5_bm_search", "5_bm_search\5_bm_search.phpproj", "{5063F5C7-2047-4CED-A966-AE566BC06184}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5063F5C7-2047-4CED-A966-AE566BC06184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5063F5C7-2047-4CED-A966-AE566BC06184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5063F5C7-2047-4CED-A966-AE566BC06184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5063F5C7-2047-4CED-A966-AE566BC06184}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2787C7A8-5F14-4F7B-B4CF-DC95E0D9F270}
+	EndGlobalSection
+EndGlobal
