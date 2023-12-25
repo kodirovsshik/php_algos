@@ -15,6 +15,18 @@ Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "9_binsearch_opt_tree", "9_b
 EndProject
 Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "10_binsearch_avl_tree", "10_binsearch_avl_tree\10_binsearch_avl_tree.phpproj", "{5F8A3331-D5D2-493B-B7D0-4F2D435038B3}"
 EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "11_trie", "11_bin_trie\11_trie.phpproj", "{AFD2C3CE-6D31-4D95-A757-A00D7DA28866}"
+EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "12_heapsort", "12_heapsort\12_heapsort.phpproj", "{07A7CE38-7604-48DB-ABC9-EF7B78FE0041}"
+EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "13_shellsort", "13_shell_sort\13_shellsort.phpproj", "{672EB88A-7D6A-495D-AFC2-009DDC47E800}"
+EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "14_quicksort", "14_quicksort\14_quicksort.phpproj", "{EA7B489E-CD7B-4E0F-857F-75A3A0E9E42C}"
+EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "15_mergesort", "15_mergesort\15_mergesort.phpproj", "{4224E85F-C231-4F86-8815-7EC3BD8C0A33}"
+EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "16_narutalmergesort", "16_narutalmergesort\16_narutalmergesort.phpproj", "{64FCC229-B8BB-49FF-94A6-A7EA6C7D3F99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +57,30 @@ Global
 		{5F8A3331-D5D2-493B-B7D0-4F2D435038B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F8A3331-D5D2-493B-B7D0-4F2D435038B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F8A3331-D5D2-493B-B7D0-4F2D435038B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD2C3CE-6D31-4D95-A757-A00D7DA28866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD2C3CE-6D31-4D95-A757-A00D7DA28866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD2C3CE-6D31-4D95-A757-A00D7DA28866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD2C3CE-6D31-4D95-A757-A00D7DA28866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A7CE38-7604-48DB-ABC9-EF7B78FE0041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A7CE38-7604-48DB-ABC9-EF7B78FE0041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A7CE38-7604-48DB-ABC9-EF7B78FE0041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A7CE38-7604-48DB-ABC9-EF7B78FE0041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672EB88A-7D6A-495D-AFC2-009DDC47E800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672EB88A-7D6A-495D-AFC2-009DDC47E800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672EB88A-7D6A-495D-AFC2-009DDC47E800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672EB88A-7D6A-495D-AFC2-009DDC47E800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7B489E-CD7B-4E0F-857F-75A3A0E9E42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7B489E-CD7B-4E0F-857F-75A3A0E9E42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7B489E-CD7B-4E0F-857F-75A3A0E9E42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7B489E-CD7B-4E0F-857F-75A3A0E9E42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4224E85F-C231-4F86-8815-7EC3BD8C0A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4224E85F-C231-4F86-8815-7EC3BD8C0A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4224E85F-C231-4F86-8815-7EC3BD8C0A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4224E85F-C231-4F86-8815-7EC3BD8C0A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FCC229-B8BB-49FF-94A6-A7EA6C7D3F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FCC229-B8BB-49FF-94A6-A7EA6C7D3F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FCC229-B8BB-49FF-94A6-A7EA6C7D3F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FCC229-B8BB-49FF-94A6-A7EA6C7D3F99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

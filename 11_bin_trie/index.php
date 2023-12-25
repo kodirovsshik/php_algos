@@ -49,32 +49,51 @@ function traverse_tree($root, $callable, $level = 0)
 	traverse_tree($root->left, $callable, $level + 1);
 }
 
-function print_tree($root)
+function print_trie($root, $l = 0)
 {
-	traverse_tree(
-		$root,
-		function ($n, $l) {
-			echo str_repeat("    ", $l);
-			echo $n->val, "\n";
-		}
-	);
+    traverse_tree(
+        $root,
+        function ($n, $l) {
+            $x = $n->val;
+            if ($x === null)
+                $x = "x";
+            echo str_repeat("    ", $l);
+            echo $x, "\n";
+        }
+    );
+    return;
+
+    if ($root === null)
+        return;
+
+    print_trie($root->right, $l + 1);
+	if ($root->val !== null)
+    {
+        echo str_repeat("    ", $l);
+        echo $root->val, "\n";
+    }
+    print_trie($root->left, $l + 1);
 }
 
-function insert_tree(&$root, $val)
+function insert_trie(&$root, $val, $bits = null)
 {
-	return insert_tree_subtree($root, new node($val));
-}
-function insert_tree_subtree(&$root, $subtree)
-{
-	if (is_null($root)) {
-		$root = $subtree;
+	if ($bits === null)
+		$bits = $val;
+
+    if ($root === null)
+		$root = new node(null);
+
+	if ($bits == 0)
+    {
+		$root->val = $val;
 		return;
-	}
+    }
 
-	if (rand(0, 1) == 0)
-		insert_tree_subtree($root->left, $subtree);
+    $newbits = $bits >> 1;
+	if ($bits & 1)
+		insert_trie($root->right, $val, $newbits);
 	else
-		insert_tree_subtree($root->right, $subtree);
+		insert_trie($root->left, $val, $newbits);
 }
 
 function count_tree_pred($root, $callable)
@@ -100,25 +119,25 @@ function search_tree($root, $val)
 		return false;
 	if ($root->val == $val)
 		return true;
-	return search_tree($root->left, $val) || search_tree($root->right, $val);
+	if ($val < $root->val)
+		return search_tree($root->left, $val);
+	else
+		return search_tree($root->right, $val);
 }
-function delete_tree_val(&$root, $val)
+function delete_trie_val(&$root, $val)
 {
-    if (is_null($root))
-        return;
-	if ($root->val == $val) {
-		$l = $root->left;
-		$r = $root->right;
-		if (is_null($l))
-			swap($l, $r);
-		$root = $l;
-		if (!is_null($r))
-			insert_tree_subtree($root, $r);
+	if (is_null($root))
 		return;
+
+	if ($root->val == $val) {
+        $root->val = null;
+        return;
 	}
 
-	delete_tree_val($root->left, $val);
-	delete_tree_val($root->right, $val);
+	if ($val < $root->val)
+		delete_trie_val($root->left, $val);
+	else
+		delete_trie_val($root->right, $val);
 }
 function delete_tree(&$root)
 {
@@ -130,29 +149,28 @@ function delete_tree(&$root)
 }
 
 
-srand(2);
+
 $tree = null;
 $vals = [3, 2, 7, 5, 4, 8, 9, 6];
 $deletee = 7;
 
 $tree_info = function () use (&$tree, $deletee) {
-	print_tree($tree);
-	echo is_null($tree) ? "[]" : $tree, "\n";
+	print_trie($tree);
 	echo "Поиск значения $deletee: ", (int) search_tree($tree, $deletee), "\n";
 };
 
 
 
-echo "Создание произвольного дерева\n\n";
+echo "Создание поразрадного дерева\n\n";
 foreach ($vals as $val)
-	insert_tree($tree, $val);
+	insert_trie($tree, $val);
 
 $tree_info();
 
 
 
 echo "\nУдаление элемента $deletee\n\n";
-delete_tree_val($tree, $deletee);
+delete_trie_val($tree, $deletee);
 
 $tree_info();
 

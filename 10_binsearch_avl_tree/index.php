@@ -258,6 +258,4 @@ delete_tree($tree);
 $tree_info();
 
 
-
-echo "\n";
-
+echo "";

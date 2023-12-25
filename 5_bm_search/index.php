@@ -54,5 +54,5 @@ $sub = read("Введите подстроку: ");
 
 search($s, $sub);
 
-echo 1;
+echo "";
 
