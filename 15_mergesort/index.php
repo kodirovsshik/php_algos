@@ -95,11 +95,6 @@ function merge_sort(&$arr, $iter = 1)
     }
 }
 
-function read($prompt)
-{
-	echo $prompt;
-	return ;
-}
 function read_array($n)
 {
     $fname = sprintf("f%d.txt", $n);
